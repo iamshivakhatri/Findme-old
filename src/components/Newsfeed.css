@@ -1,0 +1,130 @@
+/* Newsfeed.css */
+
+/* Container for the entire Newsfeed component */
+.newsfeed {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Create Project Form */
+  .create-project-form {
+    margin-bottom: 20px;
+  }
+  
+  .create-project-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .create-project-form input,
+  .create-project-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-project-form textarea {
+    resize: vertical;
+  }
+  
+  .create-project-form button {
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .create-project-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Friends' Projects */
+  .friends-projects {
+    margin-bottom: 30px;
+  }
+  
+  .friends-projects h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Project List */
+  .project-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .project-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .project-item p {
+    margin-bottom: 20px;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Title and Description Section */
+  .title-section {
+    margin-bottom: 10px;
+  }
+  
+  .title-section h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  /* Media Section */
+  .media-section {
+    margin-bottom: 10px;
+  }
+  
+  .media-section img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  
+  /* Like and Comment Section */
+  .like-comment-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .like-comment-section p {
+    font-size: 14px;
+    color: #666;
+  }
+  

@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import ProfilePage from './components/Profilepage'; 
 import Home from './components/Home'
 import Landingpage from './components/Landingpage';
+import Newsfeed from './components/Newsfeed';
 
 
 
@@ -29,6 +30,7 @@ function App() {
             />
        <Route path="/profile" element={<ProfilePage />} />
        <Route path="/landingpage" element={<Landingpage />} />
+       <Route path="/newsfeed" element={<Newsfeed />} />
 
     </Routes>
   </Router>

@@ -72,6 +72,9 @@ const Navbar = () => {
         <Link to= "./landingpage" className = "company-name"> 
           Landingpage
         </Link>  
+        <Link to= "./newsfeed" className = "company-name"> 
+          NewsFeed
+        </Link>  
       </div>
       <div className="navbar-right">
         <div className="icon-right">  
