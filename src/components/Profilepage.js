@@ -1,21 +1,75 @@
 import React, {useState} from 'react'
 import './Profilepage.css'
 import elon from './elon.png'
-
+import { Link } from 'react-router-dom'
 
 const About = () => {
     const sampleProjects = [
-        { id: 1, name: 'Project 1', description: 'Description for Project 1' },
-        { id: 2, name: 'Project 2', description: 'Description for Project 2' },
-        { id: 3, name: 'Project 3', description: 'Description for Project 3' },
-        { id: 4, name: 'Project 4', description: 'Description for Project 4' },
-        { id: 5, name: 'Project 5', description: 'Description for Project 5' },
-        { id: 6, name: 'Project 6', description: 'Description for Project 6' },
-        { id: 7, name: 'Project 7', description: 'Description for Project 7' },
-        
-
-        // Add more project items as needed
-      ];
+      {
+        name: 'Project 1',
+        description: 'This is the description of Project 1.',
+        link: 'https://example.com/project1',
+        contributors: [
+          { name: 'Shiva khatri', profileLink: 'https://example.com/contributor1' },
+          { name: 'Contributor 2', profileLink: 'https://example.com/contributor2' },
+        ],
+      },
+      {
+        name: 'Project 2',
+        description: 'This is the description of Project 2.',
+        link: 'https://example.com/project2',
+        contributors: [
+          { name: 'Contributor 3', profileLink: 'https://example.com/contributor3' },
+          { name: 'Contributor 4', profileLink: 'https://example.com/contributor4' },
+        ],
+      },
+      {
+        name: 'Project 3',
+        description: 'This is the description of Project 3.',
+        link: 'https://example.com/project3',
+        contributors: [
+          { name: 'Contributor 5', profileLink: 'https://example.com/contributor5' },
+          { name: 'Contributor 6', profileLink: 'https://example.com/contributor6' },
+        ],
+      },
+      {
+        name: 'Project 3',
+        description: 'This is the description of Project 3.',
+        link: 'https://example.com/project3',
+        contributors: [
+          { name: 'Contributor 5', profileLink: 'https://example.com/contributor5' },
+          { name: 'Contributor 6', profileLink: 'https://example.com/contributor6' },
+        ],
+      },
+      {
+        name: 'Project 3',
+        description: 'This is the description of Project 3.',
+        link: 'https://example.com/project3',
+        contributors: [
+          { name: 'Contributor 5', profileLink: 'https://example.com/contributor5' },
+          { name: 'Contributor 6', profileLink: 'https://example.com/contributor6' },
+        ],
+      },
+      {
+        name: 'Project 3',
+        description: 'This is the description of Project 3.',
+        link: 'https://example.com/project3',
+        contributors: [
+          { name: 'Contributor 5', profileLink: 'https://example.com/contributor5' },
+          { name: 'Contributor 6', profileLink: 'https://example.com/contributor6' },
+        ],
+      },
+      // Add more projects here...
+      {
+        name: 'Project 7',
+        description: 'This is the description of Project 7.',
+        link: 'https://example.com/project7',
+        contributors: [
+          { name: 'Contributor 11', profileLink: 'https://example.com/contributor11' },
+          { name: 'Contributor 12', profileLink: 'https://example.com/contributor12' },
+        ],
+      },
+    ];
 
       const sampleContributors = [
         { id: 1, name: 'Contributor 1' },
@@ -70,21 +124,36 @@ const About = () => {
 
             {visibleProjects.map((project)=>{
                 return(
-                <div className="project-item"> 
+                <div className="project-item" key={project.name}> 
                 <h3> {project.name} </h3>
                 <p> {project.description}</p>
+                <a href={project.link} className="project-link">
+              View Project
+            </a>
+
+            <div className="contributors-section">
+              {project.contributors.map((contributor) => (
+                <Link to={contributor.profileLink} className="contributor-avatar" key={contributor.name}>
+                <img src={contributor.imageSrc} alt={contributor.name} />
+              </Link>
+              ))}
+            </div>
+
+
                 </div>
                 )
                
             })}
 
          
-          </div>
+     
 
          
 
 
-          {!showAllProjects && sampleProjects.length >= 6 && (
+          
+        </div>
+        {!showAllProjects && sampleProjects.length >= 6 && (
             <div className="text-center">  
           <button  onClick={() => setShowAllProjects(true)}>Show More</button>
           </div>
@@ -95,7 +164,12 @@ const About = () => {
           <button  className='text-center' onClick={() => setShowAllProjects(false)}>Show Less</button>
           </div>
         )}
+
         </div>
+  
+
+
+
   
         {/* Contributors Division */}
         <div className="contributors-container">

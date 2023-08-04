@@ -1,6 +1,9 @@
 import React from 'react';
 import './Landingpage.css'; 
 import { Link } from 'react-router-dom';
+import create from './create.png'
+import share from './share.png'
+import collaborate from './collaborate.png'
 
 import elon from './elon.png'
 import Collaborate from './collobarative.png'
@@ -133,19 +136,19 @@ const Landingpage = () => {
             {
               id: 1,
               title: 'Step 1: Create Your Profile',
-              image: doctor,
+              image: create,
               description: 'Sign up and create your profile on "Findme." Showcase your skills and projects to the community.',
             },
             {
               id: 2,
               title: 'Step 2: Share Your Projects',
-              image: doctor,
+              image: share,
               description: 'Share your ongoing projects and ideas with the community. Get feedback and collaboration requests.',
             },
             {
               id: 3,
               title: 'Step 3: Collaborate and Engage',
-              image: doctor,
+              image: collaborate,
               description: 'Engage with other users, collaborate on exciting projects, and explore new opportunities.',
             },
             // Add more dummy "How It Works" steps as needed
