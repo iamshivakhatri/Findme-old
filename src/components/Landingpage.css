@@ -1,0 +1,623 @@
+/* Apply your chosen color scheme and typography here */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Space+Grotesk:wght@300&display=swap');
+body {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+:root {
+    --background-color: #f9f9f9;
+    --primary-color: #1a237e;
+    --secondary-color: #ff9800;
+    --accent-color: #1565c0;
+    --text-color: #ffffff;
+    --text-color-dark: #333333;
+    --gradient-background:  linear-gradient(129deg, #ffdf00 0%, #c1deff 70% 70%);
+    --font-family: 'Space Grotesk', sans-serif;
+
+
+  }
+
+
+  .classic-gradient {
+    background-image: 
+      linear-gradient(129deg, #ffdf00 0%, #c1deff 70% 70%)
+    ;
+  }
+
+  /* Apply your chosen color scheme and typography here */
+
+
+
+  .landing-page-container {
+    min-height: 100vh; /* Set the minimum height of the container to 100vh (viewport height) */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /* Set the minimum height of the hero section to 100vh (viewport height) */
+    background-image: linear-gradient(129deg, #ffdf00 0%, #c1deff 70%);
+   /* background-color: #fff9e6;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
+  
+  .hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .shape {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffcc00; /* Your chosen color */
+    opacity: 0.6;
+  }
+  
+  .shape1 {
+    transform: rotate(45deg);
+  }
+  
+  .shape2 {
+    transform: rotate(-45deg);
+  }
+  
+  .shape3 {
+    transform: rotate(-135deg);
+  }
+  
+  .hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #333; /* Your chosen color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+   color: black; /* Slightly darker shade on hover */
+    background-color:#f2b900;
+  }
+/** The next section start from here */  
+
+  /* Additional styles can be added as needed   this is next section now*/
+  /* Apply your chosen color scheme and typography here */
+
+.project-feed-section {
+    padding: 60px 0;
+    background-color: var(--background-color); ; 
+  }
+  
+  .project-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-details {
+    padding: 20px;
+  }
+  
+  .project-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-details p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .project-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .like-button,
+  .comment-button {
+    display: flex;
+    align-items: center;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .like-button i,
+  .comment-button i {
+    margin-right: 5px;
+  }
+  
+  /* Additional styles can be added as needed */
+  /* Apply your chosen color scheme and typography here */
+
+/* Apply your chosen color scheme and typography here */
+/* Add the following styles to your existing CSS */
+/* Add the following styles to your existing CSS */
+/* Add the following styles to your existing CSS */
+/* Testimonials and Social Proof */
+.testimonials-section {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+.testimonials-container {
+  display: inline-flex;
+  position: relative;
+ 
+  overflow: hidden; /* Hide any overflowing content */
+  flex-direction: row;
+  white-space: nowrap;
+ /* Prevent content from wrapping to a new line */
+
+ 
+}
+
+.testimonials-carousel {
+  display: flex;
+}
+
+.testimonials-carousel {
+  animation: testimonialAnimation 18s linear infinite;
+  animation-delay: 5s;
+}
+.testimonial-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 0 0 400px;
+  margin-right: 20px;
+  
+}
+
+
+
+/* Keyframes for the animations */
+@keyframes testimonialAnimation {
+  0% {
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(calc(-100% + 20px));
+  }
+}
+
+/****/
+.testimonial-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto; /* Adjust the width to your preference */
+  max-width: 300px;
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.testimonial-content {
+  text-align: center;
+  position: relative;
+
+ 
+
+
+}
+
+.testimonial-content::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff; /* Match the background color of the testimonial box */
+}
+
+.testimonial-message {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10px;
+  max-width: 100%; 
+}
+
+.testimonial-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  max-width: 300px;
+}
+
+.testimonial-position {
+  font-size: 12px;
+  color: #888;
+}
+
+
+
+/** Community section /  
+/* Apply your chosen color scheme and typography here */
+
+/* How it works section start from here*/  
+
+/* Apply your chosen color scheme and typography here */
+/* Apply your chosen color scheme and typography here */
+
+.how-it-works-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+  }
+  
+  .how-it-works-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .how-it-works-step {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .step-image {
+    position: relative;
+    background-color: #ffdf00; /* Your chosen gradient of yellow and blue */
+    background-image: 
+    linear-gradient(to bottom right, #ff0 0%, #f48b00 100%)
+  ;
+    padding: 24px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .step-image img {
+    
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .step-content {
+    padding: 20px;
+  }
+  
+  .step-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .step-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+/*Signup section start from here*/
+  /* Apply your chosen color scheme and typography here */
+
+.signup-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .signup-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .signup-form input {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .signup-button {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #f2b900;
+  }
+  
+
+  /*******/
+
+  /******/
+  .feature-section{
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .main-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    padding-bottom: 140px;
+  }
+  
+  .main-container {
+    display: flex;
+    max-width: 100%;
+    justify-content: flex-start;
+    gap: 25%;
+
+  }
+  
+  .left-section-design {
+    position: relative;
+    max-width: 600px;
+    max-height: 800px;
+    flex: 1;
+    
+  }
+  
+  .left-picture {
+    position: absolute;
+    top: 50%;
+    background-color: green;
+    left: 70%;
+    height: 70%;
+    width: 60%;
+    z-index: 2;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .left-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+  
+  .left-overlay {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(137deg, #fff536 31% 31%, #ff3595 100%)
+  ;
+    z-index: 1;
+    border-radius: 9px;
+  }
+  
+  .right-section {
+    flex: 1;
+    padding-right: 40px; /* Add spacing between left and right sections */
+    max-width: 516px;
+ 
+   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    
+  }
+  
+  .right-section h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .right-section p {
+    font-size: 24px;
+    color: #666;
+  }
+
+  /***this is the reverse design now**/
+
+  .main-section-reverse {
+    background-color: var(--background-color);
+    padding-bottom: 140px;
+  
+  }
+
+
+  .main-container-reverse {
+    display: flex;
+    max-width: 100%;
+    justify-content: flex-end;
+    gap: 25%;
+
+  }
+
+  .right-section-design{
+        position: relative;
+        max-width: 600px;
+        max-height: 800px;
+        flex: 1;
+
+  }
+
+  .left-section-text {
+    flex: 1;
+    padding-left: 40px; /* Add spacing between left and right sections */
+    max-width: 515px;
+   /** box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); **/
+    
+  }
+
+  .right-picture {
+    position: absolute;
+    top: 50%;
+    background-color: green;
+    right: 70%;
+    height: 70%;
+    width: 60%;
+    z-index: 2;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+   
+  }
+
+  .right-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+
+  .right-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+   /** background-color: rgba(255, 255, 0, 0.7); /* Tint of yellow */
+   background-image: 
+    linear-gradient(to bottom right, #00dfff 0%, #8c00ea 64% 64%, #ff6cff 100%)
+  ;
+    z-index: 1;
+    border-radius: 9px;
+  }
+
+
+  .left-section-text h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .left-section-text p {
+    font-size: 24px;
+    color: #666;
+  }
+
+
+
+
+
+  /*****/
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+

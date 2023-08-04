@@ -1,0 +1,121 @@
+/* Navbar.css */
+
+/* General styling for the navbar */
+
+Link{
+  text-decoration: none;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  /* Styling for the company name */
+  .company-name {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    margin-right:20px ;
+  }
+  
+  /* Styling for the navbar icons */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move the navbar-right section to the right */
+  }
+  
+  .nav-icon {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px; /* Increase the spacing between icons */
+    text-decoration: none;
+  }
+  
+  /* Hover effect for the icons */
+  .nav-icon:hover {
+    color: #ffcc00; /* Change the color when hovering */
+  }
+  
+  
+  
+   .navbar-right{
+    margin-right: 30px;
+  }
+
+  .navbar-left{
+    margin-left: 30px;
+  }
+  /* Adjust the icon size and spacing as needed */
+  
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    width: 300px;
+  }
+  
+  /* Profile dropdown content */
+  .profile-info {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .profile-info .university,
+  .profile-info .major {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .signout-btn {
+    display: block;
+    width: 100%;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signout-btn:hover {
+    background-color: #f2b900;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .additional-info {
+    margin-bottom: 10px;
+  }
+  
