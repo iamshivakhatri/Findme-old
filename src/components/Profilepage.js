@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import './Profilepage.css'
-import elon from './elon.png'
+import '../CSS/profile.css'
+import elon from '../PICS/elon.png'
 import { Link } from 'react-router-dom'
 
 const About = () => {

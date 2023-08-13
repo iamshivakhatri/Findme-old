@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import './profile.css'
+import '../CSS/profile.css'
+
 
 
 const About = () => {

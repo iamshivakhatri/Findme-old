@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faBell } from '@fortawesome/free-solid-svg-icons';
-import elon from './elon.png'
-import './Navbar.css'; // Create a CSS file named 'Navbar.css' and include the styles there
+import elon from '../PICS/elon.png'
+import '../CSS/Navbar.css'; // Create a CSS file named 'Navbar.css' and include the styles there
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 

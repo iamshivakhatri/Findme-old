@@ -1,138 +1,109 @@
 import React, { useState } from 'react';
-import "./Newsfeed.css"
-import elon from './elon.png'
-import create from './create.png'
-import selisha from './selisha.png'
-import yadav from './yadav.jpeg'
+import "../CSS/Newsfeed.css"
+
+import ProjectForm from './ProjectForm';
+import Modal from './Modal';
+import ProjectItem from './ProjectItem';
+import create from '../PICS/create.png'
+import selisha from '../PICS/selisha.png'
+import yadav from '../PICS/yadav.jpeg'
+import elon from '../PICS/elon.png'
+
 
 
 const Newsfeed = () => {
-  // Dummy data for user's projects and friends' projects
-  const [userProjects, setUserProjects] = useState([
-    {
-      id: 1,
-      name: 'My Project 1',
-      description: 'This is my first project.',
-    },
-    {
-      id: 2,
-      name: 'My Project 2',
-      description: 'This is my second project.',
-    },
-  ]);
 
-  const [friendsProjects, setFriendsProjects] = useState([
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [projects, setProjects] = useState([
     {
       id: 1,
-      profilePic: elon,
-      name: 'Elon Musk',
       title: 'Find me',
       description: 'I am developing the find me app.',
       media: create, // Replace with actual URL or leave blank
-      likes: 10,
-      comments: 5,
+
     },
     {
       id: 2,
-      profilePic: selisha,
-      name: 'Selisha Thapa',
       title: 'Recipe Sharing App',
       description: 'Hi guys, I am using AI and trying to make the recipe app. If anyone is interested you can comment down.',
       media: create, // Replace with actual URL or leave blank
-      likes: 15,
-      comments: 3,
+
     },
     {
         id: 3,
-        profilePic: yadav,
-        name: 'Abhishek Yadav',
         title: 'Nourish Kid',
         description: 'I am very good at gpting stuff and you can almost call me gpt yadav. I am good at talking',
         media: create, // Replace with actual URL or leave blank
-        likes: 4,
-        comments: 2,
+
       },
       {
         id: 4,
-        profilePic: 'url_to_friend_2_profile_pic.jpg',
-        name: 'Friend 2',
         title: 'Friend\'s Project 2',
         description: 'This is my friend\'s second project.',
         media: 'url_to_video_file.mp4', // Replace with actual URL or leave blank
-        likes: 15,
-        comments: 3,
+
       }
-  ]);
+    ]
+  );
 
-  const [newProject, setNewProject] = useState({
-    name: '',
-    description: '',
-  });
 
-  const handleCreateProject = () => {
-    // Logic to handle creating a new project
-    // You can add this project to the database and update the state
-    console.log('New project created:', newProject);
-    setFriendsProjects([...friendsProjects, newProject]);
-    setNewProject({
-      name: '',
-      description: '',
-    });
+  const openModal = () => {
+    setIsModalOpen(true);
   };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const submitProject = (newProject) => {
+    let thisid = projects.length + 1;
+
+    const addProject = {
+      id: thisid,
+      title: newProject.title,
+      description: newProject.description,
+      media: newProject.picture
+
+    }
+    setProjects([...projects, addProject]);
+
+    // Handle the project submission here
+    closeModal();
+  };  
+
+
 
   return (
     <div className="newsfeed">
-      {/* Create Project Form */}
-      <div className="create-project-form">
-        <h2>Create a New Project</h2>
-        <input
-          type="text"
-          placeholder="Project Name"
-          value={newProject.name}
-          onChange={(e) => setNewProject({ ...newProject, name: e.target.value })}
-        />
-        <textarea
-          placeholder="Project Description"
-          value={newProject.description}
-          onChange={(e) => setNewProject({ ...newProject, description: e.target.value })}
-        />
-        <button onClick={handleCreateProject}>Create Project</button>
-      </div>
+      {!isModalOpen && (
+        <button onClick={openModal}>Create a Post</button>
+      )}
+      {isModalOpen && (
+        <> 
+        <Modal closeModal={closeModal} submitProject = {submitProject}/>
+        </>
+      )}
+
+    
 
       {/* Friends' Projects */}
       <h2>Friends' Projects</h2>
-      <div className="project-list">
-        {friendsProjects.map((project) => (
-          <div className="project-item" key={project.id}>
-            {/* Profile Section */}
-            <div className="profile-section">
-              <img src={project.profilePic} alt="Profile" className="profile-pic" />
-              <p className="profile-name">{project.name}</p>
-            </div>
+      {
+        projects.map((project, i) => {
+          return(
+            <> 
+          <ProjectItem key = {i} project = {project} />
 
-            {/* Title and Description Section */}
-            <div className="title-section">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-            </div>
+          </>
+          )
 
-            {/* Media Section */}
-            {project.media && (
-              <div className="media-section">
-                {/* Display image or video here */}
-                {/* Replace 'project.media' with actual media file */}
-                <img src={project.media} alt="Media" />
-              </div>
-            )}
+        })
 
-            {/* Like and Comment Section */}
-            <div className="like-comment-section">
-              <p>Likes: {project.likes}</p>
-              <p>Comments: {project.comments}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+        
+      }
+
+      
+
     </div>
   );
 };

@@ -1,15 +1,15 @@
 import React from 'react';
-import './Landingpage.css'; 
+import '../CSS/Landingpage.css'; 
 import { Link } from 'react-router-dom';
-import create from './create.png'
-import share from './share.png'
-import collaborate from './collaborate.png'
+import create from '../PICS/create.png'
+import share from '../PICS/share.png'
+import collaborate from '../PICS/collaborate.png'
 
-import elon from './elon.png'
-import Collaborate from './collobarative.png'
-import commenting from './commenting.png'
-import doctor from './doctor.png'
-import appreciation from './showingappreciation.png'
+import elon from '../PICS/elon.png'
+import Collaborate from '../PICS/collobarative.png'
+import commenting from '../PICS/commenting.png'
+import doctor from '../PICS/doctor.png'
+import appreciation from '../PICS/showingappreciation.png'
 
 const Landingpage = () => {
     const features = [
