@@ -36,13 +36,6 @@ const Newsfeed = () => {
         description: 'I am very good at gpting stuff and you can almost call me gpt yadav. I am good at talking',
         media: create, // Replace with actual URL or leave blank
 
-      },
-      {
-        id: 4,
-        title: 'Friend\'s Project 2',
-        description: 'This is my friend\'s second project.',
-        media: 'url_to_video_file.mp4', // Replace with actual URL or leave blank
-
       }
     ]
   );
