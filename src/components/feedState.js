@@ -68,6 +68,23 @@ const NoteState = (props) => {
 
   };
 
+  //get the data from the supabase
+  const fetchprojects = async () => {
+    const { data, error } = await supabase.from("photofeed").select();
+    if (error) {
+      
+      setprojects(null);
+    }
+    if (data) {
+      setprojects(data);
+      
+    }
+  };
+  fetchprojects();
+}, []);
+
+//till here
+
 
   return (
     <NoteContext.Provider value={{ projects, addPost }}>
