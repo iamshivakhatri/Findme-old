@@ -5,6 +5,8 @@ import elon from '../PICS/elon.png'
 const ProjectItem = ({project}) => {
 
     const profileName = "Shiva Khatri";
+    console.log("This is project media", project.media)
+    const isImageFile = project.media instanceof File;
 
 
 
@@ -32,7 +34,21 @@ const ProjectItem = ({project}) => {
           <div className="media-section">
             {/* Display image or video here */}
             {/* Replace 'project.media' with actual media file */}
-            <img src={project.media} alt="Media" />
+       
+            {/*<img src={project.media} alt="Selected" width="200" /> */}
+            <img
+            src={(project.media)}
+            alt="Selected"
+            width="800"
+          />
+          
+                  </div>
+                )}
+         {/* Media Section */}
+        {isImageFile && (
+          <div className="media-section">
+            {/* Display image here using 'URL.createObjectURL' */}
+            <img src={URL.createObjectURL(project.media)} alt="Selected" width="800" />
           </div>
         )}
       </div>

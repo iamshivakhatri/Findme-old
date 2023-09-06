@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import feedContext from "./feedContext"
 import "../CSS/Newsfeed.css"
 //tHIS IS NEWSFEED
 
@@ -13,32 +14,16 @@ import elon from '../PICS/elon.png'
 
 
 const Newsfeed = () => {
+  const context = useContext(feedContext);
+  const {projects, addPost} = context
+  console.log(context, "This is context")
+
+ 
+
+ 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      title: 'Find me',
-      description: 'I am developing the find me app.',
-      media: create, // Replace with actual URL or leave blank
-
-    },
-    {
-      id: 2,
-      title: 'Recipe Sharing App',
-      description: 'Hi guys, I am using AI and trying to make the recipe app. If anyone is interested you can comment down.',
-      media: create, // Replace with actual URL or leave blank
-
-    },
-    {
-        id: 3,
-        title: 'Nourish Kid',
-        description: 'I am very good at gpting stuff and you can almost call me gpt yadav. I am good at talking',
-        media: create, // Replace with actual URL or leave blank
-
-      }
-    ]
-  );
+  
 
 
   const openModal = () => {
@@ -50,21 +35,13 @@ const Newsfeed = () => {
   };
 
   const submitProject = (newProject) => {
-    let thisid = projects.length + 1;
-
-    const addProject = {
-      id: thisid,
-      title: newProject.title,
-      description: newProject.description,
-      media: newProject.picture
-
-    }
-    setProjects([...projects, addProject]);
-
+    addPost(newProject)
     // Handle the project submission here
     closeModal();
   };  
 
+  // Reverse the projects array
+  const reversedProjects = [...projects].reverse();
 
 
   return (
@@ -76,14 +53,12 @@ const Newsfeed = () => {
         <> 
         <Modal closeModal={closeModal} submitProject = {submitProject}/>
         </>
-      )}
-
-    
+      )}    
 
       {/* Friends' Projects */}
       <h2>Friends' Projects</h2>
       {
-        projects.map((project, i) => {
+        reversedProjects.map((project, i) => {
           return(
             <> 
           <ProjectItem key = {i} project = {project} />

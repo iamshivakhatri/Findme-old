@@ -57,6 +57,13 @@ const ProjectForm = ({ submitProject }) => {
           onChange={(e) => setPicture(e.target.files[0])}
         />
       </label>
+      {picture && (
+          <img
+            src={URL.createObjectURL(picture)}
+            alt="Selected"
+            width="200"
+          />
+        )}
       <label>
         Tags (comma-separated):
         <input

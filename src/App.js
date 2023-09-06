@@ -11,6 +11,7 @@ import ProfilePage from './components/Profilepage';
 import Home from './components/Home'
 import Landingpage from './components/Landingpage';
 import Newsfeed from './components/Newsfeed';
+import FeedState from './components/feedState';
 
 
 
@@ -27,8 +28,10 @@ function App() {
 
 
   return (
+    <> 
+    <FeedState> 
     <Router>
-    <Navbar />
+    <Navbar/>
     <Routes>
     <Route
               path="/"
@@ -44,8 +47,8 @@ function App() {
 
     </Routes>
   </Router>
-
-
+  </FeedState>
+   </>
   );
 }
 
